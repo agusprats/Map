@@ -1,6 +1,7 @@
 package adaitw.java;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Main {
@@ -27,6 +28,11 @@ public class Main {
         mapaPersonas.forEach(
                 (dni, persona) -> System.out.println("DNI: "+dni+"-"+persona)
         );
+        Iterator<Map.Entry<Integer, Persona>> iterador = mapaPersonas.entrySet().iterator();
+        while(iterador.hasNext()){
+            Persona p = iterador.next().getValue();
+            System.out.println("Persona: "+p);
+        }
 
     }
 
