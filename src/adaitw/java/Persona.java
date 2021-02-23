@@ -54,4 +54,8 @@ public class Persona {
                 ", edad=" + edad +
                 '}';
     }
+    @Override
+    public int compareTo(Persona p) {
+        return this.dni - p.getDni();
+    }
 }

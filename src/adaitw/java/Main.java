@@ -36,8 +36,19 @@ public class Main {
             System.out.println("Persona: "+p);
         }
 
-    }
+        //Otra forma Ordenados por KEY:
+        mapaPersonas.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(System.out::println);
 
+        //Otra forma Ordenados por Valor:
+        mapaPersonas.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue())
+                .forEach(System.out::println);
+
+
+    }
+//Metodo para agregar personas
     private static void agregarPersonaAlMapa(Map<Integer, Persona> mapaPersonas, Persona p) {
         mapaPersonas.put(p.getDni(), p);
     }
